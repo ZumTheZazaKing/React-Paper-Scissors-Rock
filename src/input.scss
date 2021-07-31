@@ -10,6 +10,31 @@ body{
     padding: 0;
     height: 100vh;
 
+    .credit{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @keyframes rotate{
+            from{transform: rotate(0);}
+            to{transform: rotate(360deg);}
+        }
+
+        img{
+            content: url(./logo.svg);
+            animation: rotate 10s linear infinite;
+        }
+
+        p{
+            font-family: $titleFont;
+            font-weight: bold;
+        }
+
+    }
+
     #mainContainer{
         text-align: center;
 
@@ -123,6 +148,13 @@ body{
 
         }
 
+    }
+
+    .footer{
+        position: absolute;
+        bottom: 5px;
+        font-family: $bodyFont;
+        font-size: 14px;
     }
 
 }
