@@ -13,6 +13,13 @@ body{
     #mainContainer{
         text-align: center;
 
+        p{
+            font-family: $titleFont;
+            margin: 0;
+            padding: 0;
+            margin-bottom: 10px;
+        }
+
         #container{
             background-color: white;
             border: 2px solid black;
@@ -56,8 +63,56 @@ body{
 
             }
 
+
+            #output{
+
+                .result{
+                    font-family: $bodyFont;
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+
+                #fight{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    p{
+                        font-family: $bodyFont;
+                    }
+
+                }
+
+
+                img{
+                    cursor: pointer;
+                    width: 100px;
+                    height: 100px;
+                    margin-right: 10px;
+                    margin-left: 10px;
+                }
+
+                .paper{
+                    content: url(./images/paper.png);
+                }
+
+                .rock{
+                    content: url(./images/rock.svg);
+                }
+
+                .scissors{
+                    content: url(./images/scissors.png);
+
+                }
+
+            }
+
         }
 
     }
 
+}
+
+.hide{
+    display: none !important;
 }
