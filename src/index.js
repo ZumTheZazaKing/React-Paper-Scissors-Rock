@@ -31,7 +31,7 @@ function OutputMenu(props){
 
     <br/>
     <p className="result">{props.result}</p>
-    <br/>
+    <button onClick={props.playAgain}>Play Again</button>
 
   </div>
 
@@ -123,6 +123,12 @@ function App(){
 
   }
 
+
+  function playAgain(){
+    choiceClass.current.className = "";
+    outputClass.current.className = "hide";
+  }
+
   return <div id="mainContainer">
 
     <p>Wins: {wins}</p>
@@ -137,6 +143,7 @@ function App(){
       userImage={userImage}
       computerImage={computerImage}
       outputClass={outputClass}
+      playAgain={playAgain}
     />
     </div>
 
