@@ -6,11 +6,11 @@ import reportWebVitals from './reportWebVitals';
 
 function ChoiceMenu(props){
   
-  return <div>
+  return <div id="choice">
 
-    <button name="paper" onClick={props.handleClick}>Paper</button>
-    <button name="scissors" onClick={props.handleClick}>Scissors</button>
-    <button name="rock" onClick={props.handleClick}>Rock</button>
+    <img name="paper" onClick={props.handleClick}/>
+    <img name="scissors" onClick={props.handleClick}/>
+    <img  name="rock" onClick={props.handleClick}/>
 
   </div>
 
@@ -87,21 +87,27 @@ function App(){
           setResult("Draw")
         }
         break;
+
+      default:
+        alert("There was a problem generating the output");
+        window.location.reload();
     }
 
   }
 
-  return <div>
+  return <div id="mainContainer">
 
     <p>Wins: {wins}</p>
     <p>Defeats: {defeats}</p>
 
-    <ChoiceMenu handleClick={handleClick}/>
-    <OutputMenu 
-    userChoice={userChoice} 
-    computerChoice={computerChoice}
-    result={result}
+    <div id="container">
+      <ChoiceMenu handleClick={handleClick}/>
+      <OutputMenu 
+      userChoice={userChoice} 
+      computerChoice={computerChoice}
+      result={result}
     />
+    </div>
 
   </div>
 

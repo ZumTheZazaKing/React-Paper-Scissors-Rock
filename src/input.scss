@@ -1,3 +1,63 @@
+$bodyFont:Arial, Helvetica, sans-serif;
+$titleFont:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 body{
     background: burlywood;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+
+    #mainContainer{
+        text-align: center;
+
+        #container{
+            background-color: white;
+            border: 2px solid black;
+            padding: 10px;
+
+
+            @keyframes jump{
+                0%{transform: translateY(0);}
+                25%{transform: translateY(20px);}
+                50%{transform: translateY(-20px);}
+                75%{transform: translateY(10px);}
+                100%{transform: translateY(0);}
+            }
+
+            #choice{
+
+                img{
+                    cursor: pointer;
+                    width: 100px;
+                    height: 100px;
+                    margin-right: 10px;
+                    margin-left: 10px;
+                }
+
+                img:hover{
+                    animation: jump .2s linear 1;
+                }
+
+                img[name=paper]{
+                    content: url(./images/paper.png);
+                }
+
+                img[name=rock]{
+                    content: url(./images/rock.svg);
+                }
+
+                img[name=scissors]{
+                    content: url(./images/scissors.png);
+
+                }
+
+            }
+
+        }
+
+    }
+
 }
